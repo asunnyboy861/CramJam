@@ -9,7 +9,7 @@
 | **Repo URL** | https://github.com/asunnyboy861/CramJam |
 | **Visibility** | Public |
 | **Primary Language** | Swift |
-| **GitHub Pages** | ⏳ Pending (PHASE 7 — will be enabled from `/docs` folder) |
+| **GitHub Pages** | ✅ **ENABLED** (deployed from `/docs` folder via GitHub Actions) |
 | **SSH Note** | Port 22 is blocked on this network — push via `GIT_SSH_COMMAND="ssh -o HostName=ssh.github.com -o Port=443" git push` |
 
 ## Cloud Proxy (GLM API Backend)
@@ -26,10 +26,10 @@
 
 | Page | URL | Status |
 |------|-----|--------|
-| Landing Page | https://asunnyboy861.github.io/CramJam/ | ⏳ Pending |
-| Support | https://asunnyboy861.github.io/CramJam/support.html | ⏳ Pending |
-| Privacy Policy | https://asunnyboy861.github.io/CramJam/privacy.html | ⏳ Pending |
-| Terms of Use | https://asunnyboy861.github.io/CramJam/terms.html | ⏳ Pending (subscription app) |
+| Landing Page | https://asunnyboy861.github.io/CramJam/ | ✅ Active |
+| Support | https://asunnyboy861.github.io/CramJam/support.html | ✅ Active |
+| Privacy Policy | https://asunnyboy861.github.io/CramJam/privacy.html | ✅ Active |
+| Terms of Use | https://asunnyboy861.github.io/CramJam/terms.html | ✅ Active |
 
 ## Repository Structure
 
