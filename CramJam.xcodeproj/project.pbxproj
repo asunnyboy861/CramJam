@@ -1,0 +1,708 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07E8E0BB481438649E43B143 /* SlideImportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E00F0F63E4A17BD5A92661 /* SlideImportView.swift */; };
+		18081B48A8F38402CF29AC64 /* Flashcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE34862AE9B24B6F02A41D7B /* Flashcard.swift */; };
+		1DA5AD9ECD0E1FD70ECAEC35 /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7032D7C73BE9DBDA0C35D76D /* PaywallView.swift */; };
+		1F9597B3D161B6FE79C6EACC /* RepairSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525CB965E760C47186D7B005 /* RepairSheet.swift */; };
+		2B235CAD2B4AFEEF352CAC22 /* Sentence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2317888802B52514ABFC19 /* Sentence.swift */; };
+		2B6224A494903DEC4BE5BDDD /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = A2BA8E6AE50EAB2294E18200 /* PrivacyInfo.xcprivacy */; };
+		33E2C5766A5F78F046C26F1C /* CourseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67EC9918E19FB0F00E4887F /* CourseModels.swift */; };
+		3F9A74226E99199FD74B6D02 /* CramJamWidgets.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 8A1E550EBCCD68D21CF2588A /* CramJamWidgets.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		42286DA4DF0F7902C0E5DE3E /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5E4CA64E720EEDB1400B80 /* KeychainHelper.swift */; };
+		4530C4292E790CDC31975FB8 /* StreakStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC7FE643B95A558F0819C71 /* StreakStore.swift */; };
+		52AC1C729467539EAC1E8572 /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07589A90656D2FB6499A0709 /* RecordView.swift */; };
+		597FCE58359D25654A8AE4EC /* PostClassPipeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = F639DB2DBEA9C727418CC56E /* PostClassPipeline.swift */; };
+		5AB2E98F5580BA64F04B8239 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A686F5160F8452B1A79B868 /* ProfileView.swift */; };
+		6352D3EB2187A33A22A87739 /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB01FCC6E389B7D0BDBF680 /* ReviewView.swift */; };
+		6E5AF3D20E87002791AE49A2 /* CramPlanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF3203B5E476C4332F96741 /* CramPlanner.swift */; };
+		7192930A1E6D9BCB637576CB /* GLMService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773B778BFFD5441114E72750 /* GLMService.swift */; };
+		787AAF800EB24AB6D53ABF76 /* NotePayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB9E4EFF41B0493E866896B /* NotePayload.swift */; };
+		817963A78B40651F55D77406 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F534A758BF80BAFF1BAA3F1 /* QuizView.swift */; };
+		82C839DD8A3EAF5BE176E1C1 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 452CE01765D7190F57779FAC /* PrivacyInfo.xcprivacy */; };
+		83886882AE206C4E58735917 /* ContactSupportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFE7926AD5E7A01D9D0E5FB /* ContactSupportView.swift */; };
+		83E0C20258BCACA2948164A4 /* PurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CE9076120FF1DC788931D6 /* PurchaseManager.swift */; };
+		85A809FE074ED7574AE3077E /* AudioRecording.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3100849FAA962D3F9AFA2A0 /* AudioRecording.swift */; };
+		894F2E0D812287524A6435D8 /* GlossaryTerm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633806C7F5AA2BFCE3E0D7AC /* GlossaryTerm.swift */; };
+		8C8DFD9F66564F12FF528DFC /* AppleFMService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08952A70D24C401BBE4FD595 /* AppleFMService.swift */; };
+		8FF5E282D17D92E545E56EB1 /* RootTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01E76A23FE1310DC0A4B5C5 /* RootTabView.swift */; };
+		94351FF416D15CE8B19F6F10 /* FSRS in Frameworks */ = {isa = PBXBuildFile; productRef = C32F719E22392765B52FEBF8 /* FSRS */; };
+		9E1C397C717F620764AC122E /* StreakGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857E5C82E80EDC275741779E /* StreakGridView.swift */; };
+		A1E28180B66FD15772E4347D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B4010011D85CF58B21EA5F /* SettingsView.swift */; };
+		A3442AB0DA41452C57A491EE /* CramJamApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB19BD43E3934BA801D25FA /* CramJamApp.swift */; };
+		ACEB7350A4CE989AA7506AB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CE7F1B9926BE88711634301 /* Assets.xcassets */; };
+		B394284F266F8E3C5BE2932A /* FSRScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C14540A7D6252177284FBA /* FSRScheduler.swift */; };
+		BAE3D4741B7D03DB4715852F /* QuizItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C95C40CEA7D8F20592D4FF1 /* QuizItem.swift */; };
+		C2D6C387F2D6FCE88584AA2D /* ExportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4E2642006BB06CE839596B /* ExportService.swift */; };
+		C5DBF18855D05CFFE0DF2F01 /* CourseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7704A5B3B0ED21488D974332 /* CourseDetailView.swift */; };
+		D930BFEF8515486D2B2C5925 /* GlossaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7DD17582B572155A985DF0 /* GlossaryView.swift */; };
+		DB93760FA28F328D8E27BC35 /* CramJamWidgetsBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFC62753732A375DEA83D19 /* CramJamWidgetsBundle.swift */; };
+		E8203848B710C26DE0F08E60 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DC870F19889C4C2C044B73 /* OnboardingView.swift */; };
+		F15A812E9B51923488AC6DC2 /* CramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CE341553AC8A81D0D65F91 /* CramView.swift */; };
+		F31C84D1D6081EB895AA95EA /* LectureDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FB6F5A25EF51AE4C4DDC5D /* LectureDetailView.swift */; };
+		F48C414673E18B8D3FA43F46 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DAC522129B0F190E536D1F /* AppTheme.swift */; };
+		F59155BA5AC5E00A3BFC28C3 /* ExamPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067A18176869AEF3E70D4F5E /* ExamPlan.swift */; };
+		FD141BB93A1A453D952C15E9 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72074768B2CE2FC97202D289 /* AudioPlayer.swift */; };
+		FD2FF24C0B035F213CBD79D9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79E7272F3273F77E2C2B29E /* HomeView.swift */; };
+		FF22A5F3E17D1E5CB014A645 /* CoursesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E87344DE274FBC7088CA15 /* CoursesView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AE57F32D339A305223D76B9F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37D6532AE6B5F31B1C508E5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5E6457EADA0EC066EFF868C8;
+			remoteInfo = CramJamWidgets;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4D06819A36C1425D0B11771A /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				3F9A74226E99199FD74B6D02 /* CramJamWidgets.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		067A18176869AEF3E70D4F5E /* ExamPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamPlan.swift; sourceTree = "<group>"; };
+		07589A90656D2FB6499A0709 /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
+		08952A70D24C401BBE4FD595 /* AppleFMService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleFMService.swift; sourceTree = "<group>"; };
+		0A686F5160F8452B1A79B868 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		0B4E2642006BB06CE839596B /* ExportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportService.swift; sourceTree = "<group>"; };
+		0CFC62753732A375DEA83D19 /* CramJamWidgetsBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CramJamWidgetsBundle.swift; sourceTree = "<group>"; };
+		18CE9076120FF1DC788931D6 /* PurchaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseManager.swift; sourceTree = "<group>"; };
+		1CD86E69CEF9927121CDAD8E /* CramJamWidgets.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CramJamWidgets.entitlements; sourceTree = "<group>"; };
+		1F534A758BF80BAFF1BAA3F1 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
+		2EE03237517E15F8C7C5EF53 /* CramJam.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = CramJam.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C95C40CEA7D8F20592D4FF1 /* QuizItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizItem.swift; sourceTree = "<group>"; };
+		3CB9E4EFF41B0493E866896B /* NotePayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotePayload.swift; sourceTree = "<group>"; };
+		3CE7F1B9926BE88711634301 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3E7DD17582B572155A985DF0 /* GlossaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryView.swift; sourceTree = "<group>"; };
+		452CE01765D7190F57779FAC /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		45DAC522129B0F190E536D1F /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		463EE0E3548428E8696F7A5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		4EF3203B5E476C4332F96741 /* CramPlanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CramPlanner.swift; sourceTree = "<group>"; };
+		525CB965E760C47186D7B005 /* RepairSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepairSheet.swift; sourceTree = "<group>"; };
+		5FC7FE643B95A558F0819C71 /* StreakStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakStore.swift; sourceTree = "<group>"; };
+		633806C7F5AA2BFCE3E0D7AC /* GlossaryTerm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryTerm.swift; sourceTree = "<group>"; };
+		7032D7C73BE9DBDA0C35D76D /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
+		72074768B2CE2FC97202D289 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		7704A5B3B0ED21488D974332 /* CourseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailView.swift; sourceTree = "<group>"; };
+		773B778BFFD5441114E72750 /* GLMService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLMService.swift; sourceTree = "<group>"; };
+		857E5C82E80EDC275741779E /* StreakGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakGridView.swift; sourceTree = "<group>"; };
+		85DC870F19889C4C2C044B73 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		8A1E550EBCCD68D21CF2588A /* CramJamWidgets.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = CramJamWidgets.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CB19BD43E3934BA801D25FA /* CramJamApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CramJamApp.swift; sourceTree = "<group>"; };
+		9F5E4CA64E720EEDB1400B80 /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
+		A2BA8E6AE50EAB2294E18200 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		A8FB6F5A25EF51AE4C4DDC5D /* LectureDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureDetailView.swift; sourceTree = "<group>"; };
+		AFFE7926AD5E7A01D9D0E5FB /* ContactSupportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactSupportView.swift; sourceTree = "<group>"; };
+		B01E76A23FE1310DC0A4B5C5 /* RootTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabView.swift; sourceTree = "<group>"; };
+		B4E00F0F63E4A17BD5A92661 /* SlideImportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideImportView.swift; sourceTree = "<group>"; };
+		B67EC9918E19FB0F00E4887F /* CourseModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseModels.swift; sourceTree = "<group>"; };
+		B8E87344DE274FBC7088CA15 /* CoursesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesView.swift; sourceTree = "<group>"; };
+		B9CE341553AC8A81D0D65F91 /* CramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CramView.swift; sourceTree = "<group>"; };
+		C2B4010011D85CF58B21EA5F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		C3100849FAA962D3F9AFA2A0 /* AudioRecording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecording.swift; sourceTree = "<group>"; };
+		C79E7272F3273F77E2C2B29E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		CEB01FCC6E389B7D0BDBF680 /* ReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
+		D8C14540A7D6252177284FBA /* FSRScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSRScheduler.swift; sourceTree = "<group>"; };
+		DD2317888802B52514ABFC19 /* Sentence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sentence.swift; sourceTree = "<group>"; };
+		F639DB2DBEA9C727418CC56E /* PostClassPipeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostClassPipeline.swift; sourceTree = "<group>"; };
+		F6566082A6D3BD4AA3BFF3B7 /* CramJam.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CramJam.entitlements; sourceTree = "<group>"; };
+		FE34862AE9B24B6F02A41D7B /* Flashcard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flashcard.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		440A78A41664387383AE2594 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94351FF416D15CE8B19F6F10 /* FSRS in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		13A18727DEABE267C9BC25AA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AFFE7926AD5E7A01D9D0E5FB /* ContactSupportView.swift */,
+				7704A5B3B0ED21488D974332 /* CourseDetailView.swift */,
+				B8E87344DE274FBC7088CA15 /* CoursesView.swift */,
+				B9CE341553AC8A81D0D65F91 /* CramView.swift */,
+				3E7DD17582B572155A985DF0 /* GlossaryView.swift */,
+				C79E7272F3273F77E2C2B29E /* HomeView.swift */,
+				A8FB6F5A25EF51AE4C4DDC5D /* LectureDetailView.swift */,
+				85DC870F19889C4C2C044B73 /* OnboardingView.swift */,
+				7032D7C73BE9DBDA0C35D76D /* PaywallView.swift */,
+				0A686F5160F8452B1A79B868 /* ProfileView.swift */,
+				1F534A758BF80BAFF1BAA3F1 /* QuizView.swift */,
+				07589A90656D2FB6499A0709 /* RecordView.swift */,
+				525CB965E760C47186D7B005 /* RepairSheet.swift */,
+				CEB01FCC6E389B7D0BDBF680 /* ReviewView.swift */,
+				C2B4010011D85CF58B21EA5F /* SettingsView.swift */,
+				B4E00F0F63E4A17BD5A92661 /* SlideImportView.swift */,
+				857E5C82E80EDC275741779E /* StreakGridView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1A4C4008D82AC73B1855E12A /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				72074768B2CE2FC97202D289 /* AudioPlayer.swift */,
+				C3100849FAA962D3F9AFA2A0 /* AudioRecording.swift */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		2A593C70DDE078F64F3ECECC = {
+			isa = PBXGroup;
+			children = (
+				B2AE3933B18B81A9862CD91F /* CramJam */,
+				9E66877FF5E3252E607A7D44 /* CramJamWidgets */,
+				B07F32D8ACE1E16F9ACF2505 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2D107AF0CB86EB4A3EF4F781 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				08952A70D24C401BBE4FD595 /* AppleFMService.swift */,
+				4EF3203B5E476C4332F96741 /* CramPlanner.swift */,
+				0B4E2642006BB06CE839596B /* ExportService.swift */,
+				D8C14540A7D6252177284FBA /* FSRScheduler.swift */,
+				773B778BFFD5441114E72750 /* GLMService.swift */,
+				9F5E4CA64E720EEDB1400B80 /* KeychainHelper.swift */,
+				18CE9076120FF1DC788931D6 /* PurchaseManager.swift */,
+				5FC7FE643B95A558F0819C71 /* StreakStore.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		5176C34E9C1D56ACF7D7DB73 /* Pipeline */ = {
+			isa = PBXGroup;
+			children = (
+				F639DB2DBEA9C727418CC56E /* PostClassPipeline.swift */,
+			);
+			path = Pipeline;
+			sourceTree = "<group>";
+		};
+		65F7366C885967C2802526F7 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				45DAC522129B0F190E536D1F /* AppTheme.swift */,
+				9CB19BD43E3934BA801D25FA /* CramJamApp.swift */,
+				B01E76A23FE1310DC0A4B5C5 /* RootTabView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		9E66877FF5E3252E607A7D44 /* CramJamWidgets */ = {
+			isa = PBXGroup;
+			children = (
+				1CD86E69CEF9927121CDAD8E /* CramJamWidgets.entitlements */,
+				0CFC62753732A375DEA83D19 /* CramJamWidgetsBundle.swift */,
+				463EE0E3548428E8696F7A5E /* Info.plist */,
+				452CE01765D7190F57779FAC /* PrivacyInfo.xcprivacy */,
+			);
+			path = CramJamWidgets;
+			sourceTree = "<group>";
+		};
+		B07F32D8ACE1E16F9ACF2505 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2EE03237517E15F8C7C5EF53 /* CramJam.app */,
+				8A1E550EBCCD68D21CF2588A /* CramJamWidgets.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B2AE3933B18B81A9862CD91F /* CramJam */ = {
+			isa = PBXGroup;
+			children = (
+				3CE7F1B9926BE88711634301 /* Assets.xcassets */,
+				F6566082A6D3BD4AA3BFF3B7 /* CramJam.entitlements */,
+				A2BA8E6AE50EAB2294E18200 /* PrivacyInfo.xcprivacy */,
+				65F7366C885967C2802526F7 /* App */,
+				1A4C4008D82AC73B1855E12A /* Audio */,
+				BD6CEC1719F730048520572B /* Models */,
+				5176C34E9C1D56ACF7D7DB73 /* Pipeline */,
+				2D107AF0CB86EB4A3EF4F781 /* Services */,
+				13A18727DEABE267C9BC25AA /* Views */,
+			);
+			path = CramJam;
+			sourceTree = "<group>";
+		};
+		BD6CEC1719F730048520572B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B67EC9918E19FB0F00E4887F /* CourseModels.swift */,
+				067A18176869AEF3E70D4F5E /* ExamPlan.swift */,
+				FE34862AE9B24B6F02A41D7B /* Flashcard.swift */,
+				633806C7F5AA2BFCE3E0D7AC /* GlossaryTerm.swift */,
+				3CB9E4EFF41B0493E866896B /* NotePayload.swift */,
+				3C95C40CEA7D8F20592D4FF1 /* QuizItem.swift */,
+				DD2317888802B52514ABFC19 /* Sentence.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5E6457EADA0EC066EFF868C8 /* CramJamWidgets */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 553CA550EF109A1BE0FE40E3 /* Build configuration list for PBXNativeTarget "CramJamWidgets" */;
+			buildPhases = (
+				E37BB2D620BFA3EC4E3B4DDC /* Sources */,
+				D34EB0E542C34257BDA20682 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CramJamWidgets;
+			packageProductDependencies = (
+			);
+			productName = CramJamWidgets;
+			productReference = 8A1E550EBCCD68D21CF2588A /* CramJamWidgets.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		BB17D50ECF83283063BA3A3B /* CramJam */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95F2D4D711A836E1742F4AD5 /* Build configuration list for PBXNativeTarget "CramJam" */;
+			buildPhases = (
+				198BC8D95AFE121F28336207 /* Sources */,
+				5B529DCAF2425C4C7EE8B6C1 /* Resources */,
+				440A78A41664387383AE2594 /* Frameworks */,
+				4D06819A36C1425D0B11771A /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				86534379F364919DB21B3E0B /* PBXTargetDependency */,
+			);
+			name = CramJam;
+			packageProductDependencies = (
+				C32F719E22392765B52FEBF8 /* FSRS */,
+			);
+			productName = CramJam;
+			productReference = 2EE03237517E15F8C7C5EF53 /* CramJam.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		37D6532AE6B5F31B1C508E5A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					5E6457EADA0EC066EFF868C8 = {
+						DevelopmentTeam = JP4TN5PTS3;
+						ProvisioningStyle = Automatic;
+					};
+					BB17D50ECF83283063BA3A3B = {
+						DevelopmentTeam = JP4TN5PTS3;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 4020E8E61F074E15D55280F5 /* Build configuration list for PBXProject "CramJam" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 2A593C70DDE078F64F3ECECC;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				71385C04482E64C9F1A20977 /* XCRemoteSwiftPackageReference "swift-fsrs" */,
+			);
+			preferredProjectObjectVersion = 77;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BB17D50ECF83283063BA3A3B /* CramJam */,
+				5E6457EADA0EC066EFF868C8 /* CramJamWidgets */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5B529DCAF2425C4C7EE8B6C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACEB7350A4CE989AA7506AB6 /* Assets.xcassets in Resources */,
+				2B6224A494903DEC4BE5BDDD /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D34EB0E542C34257BDA20682 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82C839DD8A3EAF5BE176E1C1 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		198BC8D95AFE121F28336207 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F48C414673E18B8D3FA43F46 /* AppTheme.swift in Sources */,
+				8C8DFD9F66564F12FF528DFC /* AppleFMService.swift in Sources */,
+				FD141BB93A1A453D952C15E9 /* AudioPlayer.swift in Sources */,
+				85A809FE074ED7574AE3077E /* AudioRecording.swift in Sources */,
+				83886882AE206C4E58735917 /* ContactSupportView.swift in Sources */,
+				C5DBF18855D05CFFE0DF2F01 /* CourseDetailView.swift in Sources */,
+				33E2C5766A5F78F046C26F1C /* CourseModels.swift in Sources */,
+				FF22A5F3E17D1E5CB014A645 /* CoursesView.swift in Sources */,
+				A3442AB0DA41452C57A491EE /* CramJamApp.swift in Sources */,
+				6E5AF3D20E87002791AE49A2 /* CramPlanner.swift in Sources */,
+				F15A812E9B51923488AC6DC2 /* CramView.swift in Sources */,
+				F59155BA5AC5E00A3BFC28C3 /* ExamPlan.swift in Sources */,
+				C2D6C387F2D6FCE88584AA2D /* ExportService.swift in Sources */,
+				B394284F266F8E3C5BE2932A /* FSRScheduler.swift in Sources */,
+				18081B48A8F38402CF29AC64 /* Flashcard.swift in Sources */,
+				7192930A1E6D9BCB637576CB /* GLMService.swift in Sources */,
+				894F2E0D812287524A6435D8 /* GlossaryTerm.swift in Sources */,
+				D930BFEF8515486D2B2C5925 /* GlossaryView.swift in Sources */,
+				FD2FF24C0B035F213CBD79D9 /* HomeView.swift in Sources */,
+				42286DA4DF0F7902C0E5DE3E /* KeychainHelper.swift in Sources */,
+				F31C84D1D6081EB895AA95EA /* LectureDetailView.swift in Sources */,
+				787AAF800EB24AB6D53ABF76 /* NotePayload.swift in Sources */,
+				E8203848B710C26DE0F08E60 /* OnboardingView.swift in Sources */,
+				1DA5AD9ECD0E1FD70ECAEC35 /* PaywallView.swift in Sources */,
+				597FCE58359D25654A8AE4EC /* PostClassPipeline.swift in Sources */,
+				5AB2E98F5580BA64F04B8239 /* ProfileView.swift in Sources */,
+				83E0C20258BCACA2948164A4 /* PurchaseManager.swift in Sources */,
+				BAE3D4741B7D03DB4715852F /* QuizItem.swift in Sources */,
+				817963A78B40651F55D77406 /* QuizView.swift in Sources */,
+				52AC1C729467539EAC1E8572 /* RecordView.swift in Sources */,
+				1F9597B3D161B6FE79C6EACC /* RepairSheet.swift in Sources */,
+				6352D3EB2187A33A22A87739 /* ReviewView.swift in Sources */,
+				8FF5E282D17D92E545E56EB1 /* RootTabView.swift in Sources */,
+				2B235CAD2B4AFEEF352CAC22 /* Sentence.swift in Sources */,
+				A1E28180B66FD15772E4347D /* SettingsView.swift in Sources */,
+				07E8E0BB481438649E43B143 /* SlideImportView.swift in Sources */,
+				9E1C397C717F620764AC122E /* StreakGridView.swift in Sources */,
+				4530C4292E790CDC31975FB8 /* StreakStore.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E37BB2D620BFA3EC4E3B4DDC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB93760FA28F328D8E27BC35 /* CramJamWidgetsBundle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		86534379F364919DB21B3E0B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5E6457EADA0EC066EFF868C8 /* CramJamWidgets */;
+			targetProxy = AE57F32D339A305223D76B9F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		30C6B0275D611FEB6D843E13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = CramJamWidgets/CramJamWidgets.entitlements;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = CramJamWidgets/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zzoutuo.CramJam.widgets;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3D67D39085B9879971A24950 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CramJam/CramJam.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = CramJam;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "CramJam records your lectures so notes and flashcards can be generated from them. Audio stays on your device.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Speech recognition transcribes your lecture recordings on-device.";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
+				INFOPLIST_KEY_NSSupportsLiveActivitiesFrequentUpdates = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIBackgroundModes = audio;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zzoutuo.CramJam;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7347FBC66DA50D101738E11A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CramJam/CramJam.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = CramJam;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "CramJam records your lectures so notes and flashcards can be generated from them. Audio stays on your device.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Speech recognition transcribes your lecture recordings on-device.";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
+				INFOPLIST_KEY_NSSupportsLiveActivitiesFrequentUpdates = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIBackgroundModes = audio;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zzoutuo.CramJam;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		793497CB6266CF1C927C693C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = CramJamWidgets/CramJamWidgets.entitlements;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = CramJamWidgets/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zzoutuo.CramJam.widgets;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C4CD836F21D17D69815C523C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = JP4TN5PTS3;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		FED4E78D30DFF71CF62F254C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = JP4TN5PTS3;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4020E8E61F074E15D55280F5 /* Build configuration list for PBXProject "CramJam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4CD836F21D17D69815C523C /* Debug */,
+				FED4E78D30DFF71CF62F254C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		553CA550EF109A1BE0FE40E3 /* Build configuration list for PBXNativeTarget "CramJamWidgets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30C6B0275D611FEB6D843E13 /* Debug */,
+				793497CB6266CF1C927C693C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		95F2D4D711A836E1742F4AD5 /* Build configuration list for PBXNativeTarget "CramJam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7347FBC66DA50D101738E11A /* Debug */,
+				3D67D39085B9879971A24950 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		71385C04482E64C9F1A20977 /* XCRemoteSwiftPackageReference "swift-fsrs" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/open-spaced-repetition/swift-fsrs";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C32F719E22392765B52FEBF8 /* FSRS */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 71385C04482E64C9F1A20977 /* XCRemoteSwiftPackageReference "swift-fsrs" */;
+			productName = FSRS;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 37D6532AE6B5F31B1C508E5A /* Project object */;
+}

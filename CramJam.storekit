@@ -1,0 +1,116 @@
+{
+  "identifier" : "C8F2B7A1-4E9D-4B36-9E7A-52B10D6C3F14",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "2.99",
+      "familyShareable" : false,
+      "internalID" : "CJCR30000001",
+      "localizations" : [
+        {
+          "description" : "300 cloud generations for deep notes",
+          "displayName" : "300 Cloud Credits",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.zzoutuo.CramJam.credits.300",
+      "referenceName" : "Credits Pack 300",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "59.99",
+      "familyShareable" : false,
+      "internalID" : "CJLT00000002",
+      "localizations" : [
+        {
+          "description" : "On-device Pro forever + bring your own key",
+          "displayName" : "CramJam Lifetime",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.zzoutuo.CramJam.pro.lifetime",
+      "referenceName" : "Pro Lifetime",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+
+  },
+  "subscriptionGroups" : [
+    {
+      "id" : "CJPROGROUP001",
+      "localizations" : [
+
+      ],
+      "name" : "CramJam Pro",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "4.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "CJMO00000003",
+          "localizations" : [
+            {
+              "description" : "Unlimited notes, 300 credits, Cram Mode",
+              "displayName" : "CramJam Pro Monthly",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "com.zzoutuo.CramJam.pro.monthly",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "Pro Monthly",
+          "subscriptionGroupID" : "CJPROGROUP001",
+          "type" : "RecurringSubscription",
+          "winbackOffers" : [
+
+          ]
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "29.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "CJYR00000004",
+          "introductoryOffer" : {
+            "displayPrice" : "0",
+            "internalID" : "CJYRTRIAL0005",
+            "paymentMode" : "free",
+            "subscriptionPeriod" : "P1W"
+          },
+          "localizations" : [
+            {
+              "description" : "All Pro features, 400 credits monthly, trial",
+              "displayName" : "CramJam Pro Annual",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "com.zzoutuo.CramJam.pro.yearly",
+          "recurringSubscriptionPeriod" : "P1Y",
+          "referenceName" : "Pro Annual",
+          "subscriptionGroupID" : "CJPROGROUP001",
+          "type" : "RecurringSubscription",
+          "winbackOffers" : [
+
+          ]
+        }
+      ]
+    }
+  ],
+  "version" : {
+    "major" : 3,
+    "minor" : 0
+  }
+}

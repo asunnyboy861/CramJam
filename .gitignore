@@ -1,0 +1,6 @@
+.env
+keytext*.md
+COMPETITOR_REPORT.md
+GLMSecret.txt
+Secrets.plist
+.DS_Store

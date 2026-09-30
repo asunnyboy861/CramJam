@@ -1,0 +1,67 @@
+name: CramJam
+options:
+  bundleIdPrefix: com.zzoutuo
+  deploymentTarget:
+    iOS: "17.0"
+  createIntermediateGroups: true
+packages:
+  FSRS:
+    url: https://github.com/open-spaced-repetition/swift-fsrs
+    branch: main
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    DEVELOPMENT_TEAM: JP4TN5PTS3
+    CODE_SIGN_STYLE: Automatic
+    CODE_SIGN_IDENTITY: "Apple Development"
+targets:
+  CramJam:
+    type: application
+    platform: iOS
+    sources:
+      - CramJam
+    dependencies:
+      - target: CramJamWidgets
+        embed: true
+      - package: FSRS
+        product: FSRS
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.zzoutuo.CramJam
+        TARGETED_DEVICE_FAMILY: "1,2"
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_CFBundleDisplayName: CramJam
+        INFOPLIST_KEY_NSMicrophoneUsageDescription: "CramJam records your lectures so notes and flashcards can be generated from them. Audio stays on your device."
+        INFOPLIST_KEY_NSSpeechRecognitionUsageDescription: "Speech recognition transcribes your lecture recordings on-device."
+        INFOPLIST_KEY_UIBackgroundModes: audio
+        INFOPLIST_KEY_NSSupportsLiveActivities: YES
+        INFOPLIST_KEY_NSSupportsLiveActivitiesFrequentUpdates: YES
+        INFOPLIST_KEY_UIUserInterfaceStyle: Dark
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        CODE_SIGN_ENTITLEMENTS: CramJam/CramJam.entitlements
+  CramJamWidgets:
+    type: app-extension
+    platform: iOS
+    sources:
+      - CramJamWidgets
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.zzoutuo.CramJam.widgets
+        INFOPLIST_FILE: CramJamWidgets/Info.plist
+        CURRENT_PROJECT_VERSION: "1"
+        MARKETING_VERSION: "1.0"
+        SKIP_INSTALL: YES
+        CODE_SIGN_ENTITLEMENTS: CramJamWidgets/CramJamWidgets.entitlements
+schemes:
+  CramJam:
+    build:
+      targets:
+        CramJam: all
+        CramJamWidgets: all
+    run:
+      config: Debug
+      storeKitConfiguration: CramJam.storekit
