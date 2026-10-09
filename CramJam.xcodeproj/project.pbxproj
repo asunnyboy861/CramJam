@@ -36,6 +36,7 @@
 		9E1C397C717F620764AC122E /* StreakGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857E5C82E80EDC275741779E /* StreakGridView.swift */; };
 		A1E28180B66FD15772E4347D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B4010011D85CF58B21EA5F /* SettingsView.swift */; };
 		A3442AB0DA41452C57A491EE /* CramJamApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB19BD43E3934BA801D25FA /* CramJamApp.swift */; };
+		AC418F432FEB2BF70FCCE179 /* GLMProxySecret.txt in Resources */ = {isa = PBXBuildFile; fileRef = DC24B409D5B2C04E26821735 /* GLMProxySecret.txt */; };
 		ACEB7350A4CE989AA7506AB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CE7F1B9926BE88711634301 /* Assets.xcassets */; };
 		B394284F266F8E3C5BE2932A /* FSRScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C14540A7D6252177284FBA /* FSRScheduler.swift */; };
 		BAE3D4741B7D03DB4715852F /* QuizItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C95C40CEA7D8F20592D4FF1 /* QuizItem.swift */; };
@@ -121,6 +122,7 @@
 		C79E7272F3273F77E2C2B29E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		CEB01FCC6E389B7D0BDBF680 /* ReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
 		D8C14540A7D6252177284FBA /* FSRScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSRScheduler.swift; sourceTree = "<group>"; };
+		DC24B409D5B2C04E26821735 /* GLMProxySecret.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = GLMProxySecret.txt; sourceTree = "<group>"; };
 		DD2317888802B52514ABFC19 /* Sentence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sentence.swift; sourceTree = "<group>"; };
 		F639DB2DBEA9C727418CC56E /* PostClassPipeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostClassPipeline.swift; sourceTree = "<group>"; };
 		F6566082A6D3BD4AA3BFF3B7 /* CramJam.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CramJam.entitlements; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 			children = (
 				3CE7F1B9926BE88711634301 /* Assets.xcassets */,
 				F6566082A6D3BD4AA3BFF3B7 /* CramJam.entitlements */,
+				DC24B409D5B2C04E26821735 /* GLMProxySecret.txt */,
 				A2BA8E6AE50EAB2294E18200 /* PrivacyInfo.xcprivacy */,
 				65F7366C885967C2802526F7 /* App */,
 				1A4C4008D82AC73B1855E12A /* Audio */,
@@ -355,6 +358,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACEB7350A4CE989AA7506AB6 /* Assets.xcassets in Resources */,
+				AC418F432FEB2BF70FCCE179 /* GLMProxySecret.txt in Resources */,
 				2B6224A494903DEC4BE5BDDD /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,7 +442,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = CramJamWidgets/CramJamWidgets.entitlements;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				INFOPLIST_FILE = CramJamWidgets/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -459,6 +463,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CramJam/CramJam.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EXCLUDED_SOURCE_FILE_NAMES = GLMProxySecret.txt;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = CramJam;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "CramJam records your lectures so notes and flashcards can be generated from them. Audio stays on your device.";
@@ -468,6 +473,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIBackgroundModes = audio;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -494,6 +501,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIBackgroundModes = audio;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -509,7 +518,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = CramJamWidgets/CramJamWidgets.entitlements;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				INFOPLIST_FILE = CramJamWidgets/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -560,7 +569,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = JP4TN5PTS3;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -628,7 +637,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = JP4TN5PTS3;
 				ENABLE_NS_ASSERTIONS = NO;

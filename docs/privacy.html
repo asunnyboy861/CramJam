@@ -10,39 +10,66 @@
         h2 { color: #444; margin-top: 30px; }
         h3 { color: #555; }
         .contact { background: #f8f9fa; padding: 20px; border-radius: 8px; margin-top: 20px; }
+        .highlight { background: #eef6ff; padding: 16px; border-radius: 8px; border-left: 4px solid #0066cc; }
         a { color: #0066cc; text-decoration: none; }
         a:hover { text-decoration: underline; }
         ul, ol { padding-left: 20px; }
         li { margin-bottom: 8px; }
-        
+
     </style>
 </head>
 <body>
 <h1>Privacy Policy</h1>
-    <p>Last updated: 2026-09-30</p>
-    
+    <p>Last updated: 2026-10-09</p>
+
+    <h2>Overview</h2>
+    <p>CramJam is a study-notes app. Its core features — recording, live captions, on-device transcription, flashcard review, FSRS scheduling, and course management — run entirely on your device and are free. An <strong>optional</strong> cloud-generation feature can send your content to an AI service to create richer notes, flashcards, and quizzes. Nothing is sent to any AI service without your explicit permission (see "Third-Party AI Processing" below).</p>
+
     <h2>Information We Collect</h2>
     <p>We collect minimal information necessary to provide our services:</p>
     <ul>
-        <li>App usage data (anonymous)</li>
-        <li>Device information (for compatibility)</li>
-        <li>Crash reports (to improve stability)</li>
+        <li><strong>Anonymous user identifier</strong> — a random UUID generated on your device, used by our cloud relay to track your cloud-credit balance and subscription status. It contains no name, email, or contact information.</li>
+        <li><strong>Purchase and credit records</strong> — your plan type (Free/Pro/Lifetime) and remaining cloud-credit balance, stored server-side so purchases survive reinstallations.</li>
+        <li><strong>Operational records</strong> — anonymous, short-lived rate-limiting counters to keep the service stable for everyone.</li>
+        <li><strong>Your content, only with permission</strong> — class transcript text, imported slide images, or individual sentences, sent to the cloud relay <strong>only after you explicitly allow cloud generation</strong> (see below). These are used solely to generate your study materials.</li>
     </ul>
-    
+    <p>We do <strong>not</strong> collect: your name, email address, phone number, location, contacts, photos (beyond slides you choose to import), health data, browsing history, or advertising identifiers.</p>
+
     <h2>How We Use Your Information</h2>
-    <p>Your information is used solely to:</p>
     <ul>
-        <li>Provide and improve our services</li>
-        <li>Fix bugs and technical issues</li>
-        <li>Understand user preferences</li>
+        <li>To generate the notes, flashcards, and quizzes you request (requires your permission for cloud AI)</li>
+        <li>To validate subscriptions and in-app purchases and maintain your credit balance</li>
+        <li>To keep the cloud relay reliable (rate limiting, abuse prevention)</li>
+        <li>To fix bugs and improve stability</li>
     </ul>
-    
+    <p>We do <strong>not</strong> use your information for advertising, and we never sell your data to anyone.</p>
+
     <h2>Data Storage</h2>
-    <p>All data is stored locally on your device unless you explicitly enable cloud sync.</p>
-    
-    <h2>Third-Party Services</h2>
-    <p>We do not share your data with third parties.</p>
-    
+    <p>Recordings, transcripts, notes, flashcards, and your courses are stored locally on your device. Our cloud relay does <strong>not</strong> store your transcripts or slide images; it processes them in memory to forward your request and returns the result. Only the anonymous identifier, plan, and credit balance described above are stored server-side.</p>
+
+    <h2>Third-Party AI Processing (Important)</h2>
+    <div class="highlight">
+        <p><strong>What is sent:</strong> When you allow cloud generation, CramJam sends the text of your class transcript — or the slide images you import, or the individual sentence you are fixing — to our cloud relay.</p>
+        <p><strong>Who receives it:</strong> The relay (cramjam-api.calcs.top, operated by us) forwards the content to the <strong>GLM large language model operated by Z.ai</strong> to generate your study materials. If you choose to add your own API key in Settings, cloud requests are sent directly from your device to the provider you selected (for example Z.ai, OpenAI, Google, DeepSeek, or Anthropic), and your key is stored only in your device's Keychain — it is never sent to us.</p>
+        <p><strong>Permission:</strong> Cloud generation is off by default. Before any content is sent, the app shows a permission screen describing exactly what will be sent and to whom, and asks you to allow it. You can withdraw permission at any time in Settings → AI Data &amp; Privacy. When permission is off, all generation falls back to on-device AI and nothing leaves your device.</p>
+        <p><strong>Use limitations:</strong> Your content is used only to fulfill your generation request. It is not used for advertising, is never sold, and is not used to train models. Our relay does not retain your transcripts or slides.</p>
+    </div>
+    <p>Where required, we rely on contractual arrangements with our service providers and only work with providers that offer comparable protection for personal data. For details of Z.ai's data practices, see the provider's own terms and privacy documentation.</p>
+
+    <h2>Your Controls</h2>
+    <ul>
+        <li><strong>Grant or withdraw AI permission:</strong> Settings → AI Data &amp; Privacy → Cloud generation</li>
+        <li><strong>On-device only mode:</strong> decline cloud generation; all AI features fall back to on-device processing</li>
+        <li><strong>Delete your content:</strong> delete a recording or a lecture in the app and its transcript is removed from your device</li>
+        <li><strong>Delete purchases record:</strong> contact us to remove your server-side records</li>
+    </ul>
+
+    <h2>Children</h2>
+    <p>CramJam is not directed at children under 13 and does not knowingly collect personal information from children.</p>
+
+    <h2>Changes to This Policy</h2>
+    <p>We may update this policy as the app evolves. The "Last updated" date above shows the current version. Material changes will also be reflected in the app's consent screens.</p>
+
     <h2>Contact Us</h2>
     <p>If you have questions about this privacy policy, contact us at <a href="mailto:iocompile67692@gmail.com">iocompile67692@gmail.com</a></p>
 </body>

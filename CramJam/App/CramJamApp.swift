@@ -6,6 +6,7 @@ struct CramJamApp: App {
     @StateObject private var purchases = PurchaseManager.shared
     @StateObject private var pipelineMonitor = PipelineMonitor.shared
     @StateObject private var glm = GLMService.shared
+    @StateObject private var cloudConsent = CloudConsentCenter.shared
 
     private let container: ModelContainer
 
@@ -38,6 +39,10 @@ struct CramJamApp: App {
                 .environmentObject(purchases)
                 .environmentObject(pipelineMonitor)
                 .environmentObject(glm)
+                .environmentObject(cloudConsent)
+                .sheet(isPresented: $cloudConsent.showConsentSheet) {
+                    CloudConsentSheet()
+                }
                 .tint(.appAccent)
                 .preferredColorScheme(.dark)
         }

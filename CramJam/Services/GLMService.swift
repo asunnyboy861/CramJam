@@ -1,18 +1,20 @@
 import Foundation
+import StoreKit
 
 final class GLMService: ObservableObject {
     static let shared = GLMService()
 
-    static let devKey = "cramjam-dev-2026" // TODO(production): replace devKey with appTransaction JWS validation
-    static let appId = "cramjam" // Worker-side rate-limit namespace (30/hour + 200/day per appId:userId)
+    static let appId = "cramjam" // Worker D1 whitelist (appId ↔ bundleId binding, verified by Worker)
     static let workerURL = URL(string: "https://cramjam-api.calcs.top")!
-    static let byoURL = URL(string: "https://api.z.ai/api/paas/v4/chat/completions")!
-    static let model = "glm-5.3-flash"
+    static let workerFallbackURL = URL(string: "https://cramjam-proxy.iocompile67692.workers.dev")!
+    static let model = "glm-5.3-flash" // Worker proxy channel model (fixed server-side)
 
     enum GLMError: LocalizedError {
         case insufficientCredits
         case rateLimited
         case unauthorized
+        case notConfigured
+        case consentDeclined
         case server(String)
         case badResponse
 
@@ -23,7 +25,11 @@ final class GLMService: ObservableObject {
             case .rateLimited:
                 return "Too many cloud requests right now. Please try again later — notes were generated on-device instead."
             case .unauthorized:
-                return "Cloud request was rejected. Notes were generated on-device instead."
+                return "This is a Pro feature. Restore your purchase or subscribe to continue — notes were generated on-device instead."
+            case .notConfigured:
+                return "Cloud AI needs a subscription or your own API key in Settings — notes were generated on-device instead."
+            case .consentDeclined:
+                return "Cloud generation is off — notes were generated on-device instead. You can enable it in Settings → AI Data & Privacy."
             case .server(let message):
                 return message
             case .badResponse:
@@ -44,41 +50,104 @@ final class GLMService: ObservableObject {
         session = URLSession(configuration: config)
     }
 
+    // MARK: - Credentials
+
+    /// devKey only exists in local debug builds (GLMProxySecret.txt is excluded from
+    /// Release via EXCLUDED_SOURCE_FILE_NAMES), so production always uses the JWS channel.
+    private var proxyDevKey: String? {
+        guard let url = Bundle.main.url(forResource: "GLMProxySecret", withExtension: "txt"),
+              let raw = try? String(contentsOf: url, encoding: .utf8) else { return nil }
+        let key = raw.trimmingCharacters(in: .whitespacesAndNewlines)
+        return key.isEmpty ? nil : key
+    }
+
+    /// Signed JWS of the current auto-renewable subscription.
+    /// Note: jwsRepresentation lives on the VerificationResult, NOT on the Transaction;
+    /// jsonRepresentation is unsigned and would be rejected by the Worker with 401.
+    private func currentEntitlementJWS() async -> String? {
+        for await result in Transaction.currentEntitlements {
+            guard case .verified(let transaction) = result,
+                  transaction.revocationDate == nil,
+                  transaction.productType == .autoRenewable else { continue }
+            let jws = result.jwsRepresentation
+            if !jws.isEmpty {
+                return jws
+            }
+        }
+        return nil
+    }
+
+    // MARK: - Public API
+
     func complete(messages: [[String: Any]], maxTokens: Int) async throws -> String {
+        // Guideline 5.1.2(i) gate: no personal content leaves the device without explicit consent
+        guard await CloudConsentCenter.shared.waitForConsent() else {
+            throw GLMError.consentDeclined
+        }
+        let byoKey = KeychainHelper.glmKey
+        if !byoKey.isEmpty {
+            // BYO channel: standard OpenAI-compatible payload — no GLM-only fields
+            let payload: [String: Any] = [
+                "model": BYOConfig.modelID,
+                "messages": messages,
+                "max_tokens": maxTokens,
+                "response_format": ["type": "json_object"],
+                "temperature": 0.3
+            ]
+            let content = try await sendDirect(payload, key: byoKey)
+            lastRouteWasOnDevice = false
+            return content
+        }
+        // Worker channel: GLM requires thinking + response_format
         let payload: [String: Any] = [
             "model": Self.model,
             "messages": messages,
-            "thinking": ["level": "low"],
-            "max_tokens": maxTokens,
+            "thinking": ["level": "low"], // required: model forces thinking, disabling returns 1210
+            "max_tokens": maxTokens, // must be generous: text ≥4096, vision/structured ≥8192 (reasoning counts toward budget)
             "response_format": ["type": "json_object"],
             "temperature": 0.3
         ]
-        let byoKey = KeychainHelper.glmKey
+        let content = try await sendWorker(payload)
+        lastRouteWasOnDevice = false
+        return content
+    }
+
+    // MARK: - Worker channel (subscription JWS → devKey)
+
+    private func sendWorker(_ payload: [String: Any]) async throws -> String {
+        var body: [String: Any] = [
+            "appId": Self.appId,
+            "userId": KeychainHelper.userUUID,
+            "payload": payload
+        ]
+        if let jws = await currentEntitlementJWS() {
+            body["appTransaction"] = jws
+        } else if let devKey = proxyDevKey {
+            body["devKey"] = devKey
+        } else {
+            throw GLMError.notConfigured
+        }
         do {
-            let content: String
-            if byoKey.isEmpty {
-                content = try await sendWorker(payload)
-            } else {
-                content = try await sendDirect(payload, key: byoKey)
+            return try await postWorker(Self.workerURL, body: body)
+        } catch let error as GLMError {
+            // Fallback line: only for transient transport/empty issues, not auth errors
+            switch error {
+            case .badResponse, .server:
+                return try await postWorker(Self.workerFallbackURL, body: body)
+            default:
+                throw error
             }
-            lastRouteWasOnDevice = false
-            return content
         } catch {
-            throw error
+            // Network failure on primary → try fallback once
+            return try await postWorker(Self.workerFallbackURL, body: body)
         }
     }
 
-    private func sendWorker(_ payload: [String: Any]) async throws -> String {
-        let envelope: [String: Any] = [
-            "appId": Self.appId,
-            "userId": KeychainHelper.userUUID,
-            "payload": payload,
-            "devKey": Self.devKey
-        ]
-        var request = URLRequest(url: Self.workerURL, timeoutInterval: 90)
+    private func postWorker(_ url: URL, body: [String: Any]) async throws -> String {
+        var request = URLRequest(url: url, timeoutInterval: 90)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpBody = try JSONSerialization.data(withJSONObject: envelope)
+        request.httpBody = try JSONSerialization.data(withJSONObject: body)
         let (data, response) = try await executeWithRetry(request)
         guard let http = response as? HTTPURLResponse else { throw GLMError.badResponse }
         switch http.statusCode {
@@ -96,8 +165,11 @@ final class GLMService: ObservableObject {
         }
     }
 
+    // MARK: - BYO key channel
+
     private func sendDirect(_ payload: [String: Any], key: String) async throws -> String {
-        var request = URLRequest(url: Self.byoURL, timeoutInterval: 90)
+        guard let endpoint = URL(string: BYOConfig.baseURL) else { throw GLMError.badResponse }
+        var request = URLRequest(url: endpoint, timeoutInterval: 90)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.setValue("Bearer \(key)", forHTTPHeaderField: "Authorization")
@@ -180,6 +252,87 @@ final class GLMService: ObservableObject {
                 ["type": "image_url", "image_url": ["url": imageDataURL]]
             ]
         ]
+    }
+}
+
+// MARK: - BYO provider configuration (multi-model, per ios-openai-module standard)
+
+struct BYOPreset: Identifiable, Equatable {
+    let id: String
+    let name: String
+    let baseURL: String
+    let modelID: String
+    let isCustom: Bool
+}
+
+enum BYOConfig {
+    static let defaultBaseURL = "https://api.z.ai/api/paas/v4/chat/completions"
+    static let defaultModelID = "glm-5.3-flash"
+
+    // Presets follow the ios-openai-module provider table exactly (URL format is the #1 cause of 404s)
+    static let presets: [BYOPreset] = [
+        BYOPreset(id: "glm", name: "GLM", baseURL: "https://api.z.ai/api/paas/v4/chat/completions", modelID: "glm-5.3-flash", isCustom: false),
+        BYOPreset(id: "gpt", name: "GPT", baseURL: "https://api.openai.com/v1/chat/completions", modelID: "gpt-4o-mini", isCustom: false),
+        BYOPreset(id: "gemini", name: "Gemini", baseURL: "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions", modelID: "gemini-2.5-flash", isCustom: false),
+        BYOPreset(id: "deepseek", name: "DeepSeek", baseURL: "https://api.deepseek.com/chat/completions", modelID: "deepseek-chat", isCustom: false),
+        BYOPreset(id: "claude", name: "Claude", baseURL: "https://api.anthropic.com/v1/chat/completions", modelID: "claude-sonnet-4-5", isCustom: false),
+        BYOPreset(id: "custom", name: "Custom", baseURL: "", modelID: "", isCustom: true)
+    ]
+
+    static func preset(id: String) -> BYOPreset? {
+        presets.first { $0.id == id }
+    }
+
+    private static var storedPresetID: String? {
+        UserDefaults.standard.string(forKey: "byoPresetID")
+    }
+
+    static var baseURL: String {
+        if let id = storedPresetID, let preset = preset(id: id) {
+            return UserDefaults.standard.string(forKey: "byoBaseURL").flatMap { $0.isEmpty ? nil : $0 } ?? preset.baseURL
+        }
+        return UserDefaults.standard.string(forKey: "byoBaseURL").flatMap { $0.isEmpty ? nil : $0 } ?? defaultBaseURL
+    }
+
+    static var modelID: String {
+        if let id = storedPresetID, let preset = preset(id: id) {
+            return UserDefaults.standard.string(forKey: "byoModelID").flatMap { $0.isEmpty ? nil : $0 } ?? preset.modelID
+        }
+        return UserDefaults.standard.string(forKey: "byoModelID").flatMap { $0.isEmpty ? nil : $0 } ?? defaultModelID
+    }
+
+    static var isConfigured: Bool {
+        !baseURL.isEmpty && !modelID.isEmpty && URL(string: baseURL) != nil
+    }
+
+    static func save(presetID: String, baseURL: String, modelID: String) {
+        UserDefaults.standard.set(presetID, forKey: "byoPresetID")
+        UserDefaults.standard.set(baseURL, forKey: "byoBaseURL")
+        UserDefaults.standard.set(modelID, forKey: "byoModelID")
+    }
+
+    static var providerDisplayName: String {
+        switch storedPresetID {
+        case "glm": return "GLM"
+        case "gpt": return "GPT"
+        case "gemini": return "Gemini"
+        case "deepseek": return "DeepSeek"
+        case "claude": return "Claude"
+        default: return "Custom"
+        }
+    }
+}
+
+extension GLMService {
+    /// Minimal-cost connectivity test for the BYO channel (max_tokens: 10, per module standard)
+    func testBYOConnection(key: String) async throws -> String {
+        guard BYOConfig.isConfigured else { throw GLMError.badResponse }
+        let payload: [String: Any] = [
+            "model": BYOConfig.modelID,
+            "messages": [["role": "user", "content": "Reply with exactly: OK"]],
+            "max_tokens": 10
+        ]
+        return try await sendDirect(payload, key: key)
     }
 }
 
