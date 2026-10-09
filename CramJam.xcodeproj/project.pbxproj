@@ -23,6 +23,7 @@
 		6352D3EB2187A33A22A87739 /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB01FCC6E389B7D0BDBF680 /* ReviewView.swift */; };
 		6E5AF3D20E87002791AE49A2 /* CramPlanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF3203B5E476C4332F96741 /* CramPlanner.swift */; };
 		7192930A1E6D9BCB637576CB /* GLMService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773B778BFFD5441114E72750 /* GLMService.swift */; };
+		75091CCBC70CE645F1B11418 /* CloudConsentViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5ED34A7987124C0A110F14C /* CloudConsentViews.swift */; };
 		787AAF800EB24AB6D53ABF76 /* NotePayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB9E4EFF41B0493E866896B /* NotePayload.swift */; };
 		817963A78B40651F55D77406 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F534A758BF80BAFF1BAA3F1 /* QuizView.swift */; };
 		82C839DD8A3EAF5BE176E1C1 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 452CE01765D7190F57779FAC /* PrivacyInfo.xcprivacy */; };
@@ -30,6 +31,7 @@
 		83E0C20258BCACA2948164A4 /* PurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CE9076120FF1DC788931D6 /* PurchaseManager.swift */; };
 		85A809FE074ED7574AE3077E /* AudioRecording.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3100849FAA962D3F9AFA2A0 /* AudioRecording.swift */; };
 		894F2E0D812287524A6435D8 /* GlossaryTerm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633806C7F5AA2BFCE3E0D7AC /* GlossaryTerm.swift */; };
+		8AC384891BC312B23C7A72C6 /* CloudConsent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F488A23AA0EE3D49E823A7F /* CloudConsent.swift */; };
 		8C8DFD9F66564F12FF528DFC /* AppleFMService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08952A70D24C401BBE4FD595 /* AppleFMService.swift */; };
 		8FF5E282D17D92E545E56EB1 /* RootTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01E76A23FE1310DC0A4B5C5 /* RootTabView.swift */; };
 		94351FF416D15CE8B19F6F10 /* FSRS in Frameworks */ = {isa = PBXBuildFile; productRef = C32F719E22392765B52FEBF8 /* FSRS */; };
@@ -93,6 +95,7 @@
 		3CB9E4EFF41B0493E866896B /* NotePayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotePayload.swift; sourceTree = "<group>"; };
 		3CE7F1B9926BE88711634301 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E7DD17582B572155A985DF0 /* GlossaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryView.swift; sourceTree = "<group>"; };
+		3F488A23AA0EE3D49E823A7F /* CloudConsent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudConsent.swift; sourceTree = "<group>"; };
 		452CE01765D7190F57779FAC /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		45DAC522129B0F190E536D1F /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
 		463EE0E3548428E8696F7A5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -114,6 +117,7 @@
 		AFFE7926AD5E7A01D9D0E5FB /* ContactSupportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactSupportView.swift; sourceTree = "<group>"; };
 		B01E76A23FE1310DC0A4B5C5 /* RootTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabView.swift; sourceTree = "<group>"; };
 		B4E00F0F63E4A17BD5A92661 /* SlideImportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideImportView.swift; sourceTree = "<group>"; };
+		B5ED34A7987124C0A110F14C /* CloudConsentViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudConsentViews.swift; sourceTree = "<group>"; };
 		B67EC9918E19FB0F00E4887F /* CourseModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseModels.swift; sourceTree = "<group>"; };
 		B8E87344DE274FBC7088CA15 /* CoursesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesView.swift; sourceTree = "<group>"; };
 		B9CE341553AC8A81D0D65F91 /* CramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CramView.swift; sourceTree = "<group>"; };
@@ -144,6 +148,7 @@
 		13A18727DEABE267C9BC25AA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B5ED34A7987124C0A110F14C /* CloudConsentViews.swift */,
 				AFFE7926AD5E7A01D9D0E5FB /* ContactSupportView.swift */,
 				7704A5B3B0ED21488D974332 /* CourseDetailView.swift */,
 				B8E87344DE274FBC7088CA15 /* CoursesView.swift */,
@@ -187,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				08952A70D24C401BBE4FD595 /* AppleFMService.swift */,
+				3F488A23AA0EE3D49E823A7F /* CloudConsent.swift */,
 				4EF3203B5E476C4332F96741 /* CramPlanner.swift */,
 				0B4E2642006BB06CE839596B /* ExportService.swift */,
 				D8C14540A7D6252177284FBA /* FSRScheduler.swift */,
@@ -382,6 +388,8 @@
 				8C8DFD9F66564F12FF528DFC /* AppleFMService.swift in Sources */,
 				FD141BB93A1A453D952C15E9 /* AudioPlayer.swift in Sources */,
 				85A809FE074ED7574AE3077E /* AudioRecording.swift in Sources */,
+				8AC384891BC312B23C7A72C6 /* CloudConsent.swift in Sources */,
+				75091CCBC70CE645F1B11418 /* CloudConsentViews.swift in Sources */,
 				83886882AE206C4E58735917 /* ContactSupportView.swift in Sources */,
 				C5DBF18855D05CFFE0DF2F01 /* CourseDetailView.swift in Sources */,
 				33E2C5766A5F78F046C26F1C /* CourseModels.swift in Sources */,
@@ -442,7 +450,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = CramJamWidgets/CramJamWidgets.entitlements;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				INFOPLIST_FILE = CramJamWidgets/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -518,7 +526,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = CramJamWidgets/CramJamWidgets.entitlements;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				INFOPLIST_FILE = CramJamWidgets/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -569,7 +577,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = JP4TN5PTS3;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -637,7 +645,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = JP4TN5PTS3;
 				ENABLE_NS_ASSERTIONS = NO;
